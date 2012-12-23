@@ -1,10 +1,10 @@
 .popin{
-	background:white;
-	border:1px solid #ccc;
+	background: white;
+	    border: 1px solid #ccc;
 	box-shadow: 0 0 500px black;
-	color: #333;
-  position:absolute;
-  width:800px;
+	     color: #333;
+    position: absolute;
+       width: 800px;
 	
 	h2{
 		margin: 20px 0 10px 20px;
@@ -14,29 +14,29 @@
 	}	
 	
 	form{
-		background:white;
-		border: none;
-		margin: 0 0 0 30px;
+		background: white;
+		    border: none;
+		    margin: 0 0 0 30px;
 		
 		div{
 			margin: 15px 0;
 			
 			label{
-				display:block;
+				display: block;
 			}
 			input{
-				display:block;
-				width:725px;
+				display: block;
+				  width: 725px;
 			}
 			textarea{
-				display:block;
-				height:80px;
-				width:725px;
+				display: block;
+				 height: 80px;
+				  width: 725px;
 			}
 		}
 		input.button{
-			background:#3b3;
-			color: #fff;
+			background: #3b3;
+			     color: #fff;
 			
 			&:hover{
 				background: #7f7;
@@ -47,7 +47,7 @@
       float:left;
 		}
 		.position{
-      float: left;
+            float: left;
       margin-left: 30px;
 		  
 		  input{
@@ -59,13 +59,13 @@
 		}
 	}
 	.button{
-		float:left;
-		font-size:12px;		
-		height: 25px;
-		margin: 20px 5px 20px 0;		
-		width:85px;		
+		    float: left;
+		font-size: 12px;		
+		   height: 25px;
+		   margin: 20px 5px 20px 0;		
+		    width: 85px;		
 	}
 	.button.cancel{
-		height:21px;
+		height: 21px;
 	}
 }

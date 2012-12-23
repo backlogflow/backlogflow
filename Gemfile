@@ -1,16 +1,19 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.2.9'
+gem 'jquery-rails'
+gem "simple_form"
+gem 'inherited_resources'
+
 
 group :development, :test do
   gem 'jasmine'
-  gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'sqlite3'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
   gem 'cucumber'
-  # gem 'capybara'
+  gem 'debugger'
   gem 'guard-rspec'
 end
 
@@ -23,14 +26,11 @@ group :test do
   gem 'simplecov-rcov', :require => false
 end
 
-gem 'pg'
+
 
 group :assets do
-  gem 'sass-rails', "  ~> 3.1.0"
-  gem 'coffee-rails', "~> 3.1.0"
-  gem 'uglifier'
+  gem 'mysql2'
+  gem 'sass-rails'  , '~> 3.2.3'
+  gem 'coffee-rails', '~> 3.2.1'
+  gem 'uglifier'    , '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-gem "simple_form"
-gem 'inherited_resources'

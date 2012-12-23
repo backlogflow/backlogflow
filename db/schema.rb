@@ -14,41 +14,41 @@
 ActiveRecord::Schema.define(:version => 20120614223006) do
 
   create_table "changes", :force => true do |t|
-    t.integer   "story_id"
-    t.integer   "old_points"
-    t.integer   "new_points"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.integer  "story_id"
+    t.integer  "old_points"
+    t.integer  "new_points"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "home_accesses", :force => true do |t|
-    t.boolean   "is_empty",   :default => false
-    t.boolean   "is_new",     :default => false
-    t.integer   "accesses",   :default => 0
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.boolean  "is_empty",   :default => false
+    t.boolean  "is_new",     :default => false
+    t.integer  "accesses",   :default => 0
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
   end
 
   create_table "projects", :force => true do |t|
-    t.string    "name"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "stories", :force => true do |t|
-    t.string    "title"
-    t.string    "description"
-    t.string    "details"
-    t.integer   "points"
-    t.string    "value"
-    t.string    "status"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.integer   "project_id"
-    t.integer   "parent_story"
-    t.integer   "order"
-    t.integer   "position"
-    t.datetime  "done_date"
+    t.string   "title"
+    t.string   "description"
+    t.string   "details"
+    t.integer  "points"
+    t.string   "value"
+    t.string   "status"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.integer  "project_id"
+    t.integer  "parent_story"
+    t.integer  "order"
+    t.integer  "position"
+    t.datetime "done_date"
   end
 
 end

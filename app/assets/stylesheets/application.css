@@ -5,33 +5,67 @@
  *= require_self
  *= require_tree . 
 */
-
+html{
+	height:657px;
+}
+body{
+	background: #000;
+}
+.splash-image{
+	display: block;
+	 margin: 230px auto 100px;
+}
+#select-project{
+		  color: #ccc;
+		display: block;
+	font-family: Helvetica, Arial;
+	  font-size: 16px;
+		 margin: 0 auto;
+		  width: 430px;
+}
+#contact{
+	     color: #666;
+	   display: block;
+   font-family: Helvetica, Arial;
+	 font-size: 13px;
+	    margin: 40px auto;
+	text-align: center;
+	     width: 205px;
+}
+#project_name{
+	font-family: Helvetica, Arial;
+	  font-size: 16px;
+}
+#go{
+	font-family: Helvetica, Arial;
+	  font-size: 16px;
+}
 .grid-940 {
 	margin: 0 auto;
-	width: 940px;
+	 width: 940px;
 }
 .hidden {
 	display:none;
 }
 
 .button {
-	border: 1px solid #666;
-	border-radius: 5px;
-	cursor: pointer;
-	display: block;
-	font-weight: bold;
-	float: right;
-	height: 20px;
-	padding: 1px 2px;
-	text-align:center;	
- 	text-decoration: none;
-	width: 30px;
+	         border: 1px solid #666;
+	  border-radius: 5px;
+	         cursor: pointer;
+	        display: block;
+	    font-weight: bold;
+	          float: right;
+	         height: 20px;
+	        padding: 1px 2px;
+	     text-align:center;	
+	text-decoration: none;
+	          width: 30px;
 }
 
 .button.new-story {
 	background: #3b3;
-	color: #fff;
-	font-size: 15px;
+	     color: #fff;
+	 font-size: 15px;
 }
 .button.new-story:hover{
 	background: #7f7;
@@ -39,7 +73,7 @@
 
 .button.delete {
 	background: #b33;
-	color: #fff;
+	     color: #fff;
 }
 .button.delete:hover {
 	background: #f77;
@@ -47,15 +81,9 @@
 
 .button.edit {
 	background: #33b;
-	color: #fff;
+	     color: #fff;
 }
 .button.edit:hover {
 	background: #77f;
-	color: #fff;
+	     color: #fff;
 }
-/*
-#footer{
-	height: 50px;
-	width: 100%;
-}
-*/

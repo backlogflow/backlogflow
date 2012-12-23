@@ -3,13 +3,12 @@
 }
 
 .story{
-	background:#e5e5e5;
-	border: 1px solid #959595;
+	   background: #e5e5e5;
+	       border: 1px solid #959595;
 	border-radius: 5px;
 	
 	&.epic{
-		margin: 40px 0 0 0;
-		
+		    margin: 40px 0 0 0;
 		background: #e5e5f0;
 	}
 	
@@ -19,92 +18,84 @@
 		background-image: -moz-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
 		background-image: -webkit-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
 		background-image: -ms-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
-		background-image: -webkit-gradient(
-			linear,
-			left bottom,
-			left top,
-			color-stop(0, #CCCCCC),
-			color-stop(0.5, #ADADAD),
-			color-stop(1, #9E9C9E)
-		);
-		color:white;
-		height:29px;
+		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #CCCCCC),color-stop(0.5, #ADADAD),color-stop(1, #9E9C9E));
+		           color: white;
+		          height: 29px;
 		
 		> .points {
-			background: #333;
-	    border-right: 1pxsolid #333333;
+			   background: #333;
+	     border-right: 1pxsolid #333333;
 	    border-radius: 4px;
-			float:left;
-			font-weight: bold;
-			line-height:30px;
-			height: 29px;
-			margin:0;
-	    padding: 0 5px;
+			        float: left;
+			  font-weight: bold;
+			  line-height: 30px;
+			       height: 29px;
+			       margin: 0;
+	          padding: 0 5px;
 		}
 		.title {
-		  cursor: default;
+		       cursor: default;
 			margin-left: 5px;
-			float:left;
-			font-size: 15px;
-			font-weight:bold;
-			line-height:30px;
-/*      width: 735px;*/
+			      float: left;
+			  font-size: 15px;
+			font-weight: bold;
+			line-height: 30px;
 		}
 		
 		.popin-edit-status {
-			background: #CCC;
-			border: 1px solid #555;
+			   background: #CCC;
+			       border: 1px solid #555;
 			border-radius: 4px;
-			color: black;
-			float: right;
-			height:28px;
-			right: -100px;
-			position: relative;
-			top: -28px;
-			width: 144px;
+			        color: black;
+			        float: right;
+			       height: 28px;
+			        right: -100px;
+			     position: relative;
+			          top: -28px;
+			        width: 144px;
 			
 			.status-buttons{
-				margin:0;
-				padding:0;
+				 margin: 0;
+				padding: 0;
 				
 				.button{
 					background: #888;
-					color:white;
-					float:right;
-					font-size:12px;
-					height:20px;
-					margin:2px 1px 3px 1px;
-					width: 40px;
+					     color: white;
+					     float: right;
+					 font-size: 12px;
+					    height: 20px;
+					    margin: 2px 1px 3px 1px;
+					     width: 40px;
 					
 					&.clicked {
-						background:#555;
+						background: #555;
 					}
 				}
 			}
 		}
 		
 		> span.position{
-  	  background: #888;
+  	     background: #888;
   	  border-radius: 4px;
-  	  float: right;
-  	  font-size: 14px;
-  	  font-weight: bold;
-  	  line-height: 18px;
-  	  margin: 2px 2px 0 0;
-  	  padding: 2px;
+  	          float: right;
+  	      font-size: 14px;
+  	    font-weight: bold;
+  	    line-height: 18px;
+  	         margin: 2px 2px 0 0;
+  	        padding: 2px;
   	}
 		
 		.status{
-			background: #888;
+			   background: #888;
 			border-radius: 5px;		
-			color: white;
-			cursor: default;
-			float: right;
-			font-weight: bold;
-			line-height:20px;
-			height:20px;
-			margin: 2px 2px 1px 2px;
-			padding: 1px 5px;
+			        color: white;
+			       cursor: default;
+			        float: right;
+			  font-weight: bold;
+			  line-height: 20px;
+			       height: 20px;
+			       margin: 2px 2px 1px 2px;
+			      padding: 1px 5px;
 		}
 		.button{
 			margin:1px 2px;
