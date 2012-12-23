@@ -1,0 +1,61 @@
+/*
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
+ *= require_self
+ *= require_tree . 
+*/
+
+.grid-940 {
+	margin: 0 auto;
+	width: 940px;
+}
+.hidden {
+	display:none;
+}
+
+.button {
+	border: 1px solid #666;
+	border-radius: 5px;
+	cursor: pointer;
+	display: block;
+	font-weight: bold;
+	float: right;
+	height: 20px;
+	padding: 1px 2px;
+	text-align:center;	
+ 	text-decoration: none;
+	width: 30px;
+}
+
+.button.new-story {
+	background: #3b3;
+	color: #fff;
+	font-size: 15px;
+}
+.button.new-story:hover{
+	background: #7f7;
+}
+
+.button.delete {
+	background: #b33;
+	color: #fff;
+}
+.button.delete:hover {
+	background: #f77;
+}
+
+.button.edit {
+	background: #33b;
+	color: #fff;
+}
+.button.edit:hover {
+	background: #77f;
+	color: #fff;
+}
+/*
+#footer{
+	height: 50px;
+	width: 100%;
+}
+*/

@@ -1,0 +1,9 @@
+empty:
+  is_empty: true
+  is_new: false
+  accesses: 0
+  
+new:
+  is_empty: false
+  is_new: true
+  accesses: 0

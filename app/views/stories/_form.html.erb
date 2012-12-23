@@ -1,0 +1,4 @@
+<div class="popin new-story hidden">
+  <h2><%= @project.name %></h2>
+  <%= render :partial => 'stories/story_form', :locals => { :project => @project, :story => @story, :parent_story => nil, :position => true } %>
+</div>

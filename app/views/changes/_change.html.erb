@@ -1,0 +1,10 @@
+<tr>
+  <% story = Story.where( :id => change.story_id ).first %>
+  <% if story %>
+    <td><%= story.project_id %></td>
+    <td><%= change.story_id %></td>
+    <td><%= story.parent_story %></td>  
+    <td><%= change.old_points %></td>
+    <td><%= change.new_points %></td>
+  <% end %>
+</tr>

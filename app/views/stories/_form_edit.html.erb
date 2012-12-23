@@ -1,0 +1,5 @@
+<div class="popin edit hidden">
+  <h3><%= story.title %></h3>
+  <% position = (story.status == 'To Do' and story.is_leaf) %>
+  <%= render :partial => 'stories/story_form', :locals => { :project => story.project, :story => story, :parent_story => story.id, :position => position } %>  
+</div>

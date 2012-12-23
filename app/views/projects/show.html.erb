@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+<div class="project-info">
+  <span id="project_id" class="hidden"><%= @project.id %></span>
+  <h1 class="name">
+    <%= @project.name %>
+  </h1>
+  <div class="button new-story" onclick="_gaq.push(['_trackEvent', 'new-epic', 'clicked'])">new epic</div>
+  <div class="form">
+    <%= render :partial => 'stories/form'%>
+  </div>
+
+  <div id="filter">
+    <%= link_to "Done",   "/project/#{@project.id}/filter/Done", :class => "status button done", :remote => true %>
+    <%= link_to "Doing",  "/project/#{@project.id}/filter/Doing", :class => "status button doing", :remote => true %>
+    <%= link_to "To Do ", "/project/#{@project.id}/filter/To Do", :class => "status button todo", :remote => true %>
+    <%= link_to "All",    "/project/#{@project.id}/filter/All", :class => "status button clicked all", :remote => true %>        
+    <%= image_tag "ajax-loader.gif", :title => "loading", :class => "loading" %>    
+  </div>
+</div>
+
+<%= render :partial => 'stories_list' %>

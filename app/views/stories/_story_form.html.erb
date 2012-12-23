@@ -1,0 +1,13 @@
+<%= simple_form_for [project, story], :remote => true do |form| %>
+  <%= form.input :title %>
+  <%= form.input :description, :label => "User Story" %>
+  <%= form.input :details, :as => :text, :input_html => { :maxlength => 10000, :size => 10000 } %>
+  <%= form.input :points, :collection => ["?",0,1,2,3,5,8,13,20,40,100], :include_blank => false, :wrapper_html => { :class => 'points' } %>   
+  <% if position %>
+    <%= form.input :position, :label => 'Priority', :collection => (1..@project.greatest_position+1), :include_blank => false, :wrapper_html => { :class => 'position' } %>
+  <% end %>
+  <%= form.input :value, :wrapper_html => { :class => 'value' } %>
+  <%= form.button :submit, :class => "button" %>
+  <%= form.input :parent_story, :value => parent_story, :wrapper_html => { :class => "hidden" } %>
+  <div class="button cancel">Cancel</div>
+<% end %>

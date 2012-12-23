@@ -1,0 +1,108 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+done_leaf:
+  id: 6
+  title: h1
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: Done
+  project_id: 1
+    
+doing_leaf:
+  id: 7
+  title: h1
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: Doing
+  project_id: 1
+  parent_story: 8
+    
+one:
+  id: 1
+  title: h1
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: "To Do"
+  project_id: 1
+
+two:
+  id: 2
+  title: MyString
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: "To Do"
+  project_id: 1
+  parent_story: 1
+  position: 1
+  
+three:
+  id: 3
+  title: MyString
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: "To Do"
+  project_id: 2
+  
+four:
+  id: 4
+  title: MyString
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: "To Do"
+  project_id: 2
+  parent_story: 3  
+  
+five:
+  id: 5
+  title: MyString
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: "To Do"
+  project_id: 2
+  parent_story: 3  
+
+eight:
+  id: 8
+  title: h1
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: Doing
+  project_id: 1
+  
+nine:
+  id: 9
+  title: h1
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: "To Do"
+  project_id: 1
+  position: 2
+  
+ten:
+  id: 10
+  title: h1
+  description: MyString
+  details: MyString
+  points: 1
+  value: MyString
+  status: "To Do"
+  project_id: 1
+  position: 2

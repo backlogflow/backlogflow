@@ -1,0 +1,51 @@
+$not-selected: #888;
+$selected: #555;
+
+.project-info{
+	margin-top: 40px;
+	.name{
+		margin: 80px 0 0 0;
+	}
+	.button.new-story{
+		float:left;
+		margin: 25px 4px 0 0;
+		width: 110px;
+	}
+}
+
+ul{
+	margin:0;
+	padding:0;
+	
+	li{
+		list-style-type:none;
+		margin: 20px 0 20px 0;
+	}
+	
+	ul{
+		margin:20px 0 0 20px;
+	}
+}
+
+#filter{
+  .loading{
+    display: none;
+    float:right;
+    margin: -4px 10px 0 0;
+  }
+  
+	.button{
+		background: $not-selected;
+		color: white;
+		margin: 0 2px;
+		width:50px;
+		
+		&.clicked{
+			background: $selected;
+		}
+	}
+}
+
+#stories{
+	margin: 120px 0 0 0;
+}

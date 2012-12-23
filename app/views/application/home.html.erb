@@ -1,0 +1,70 @@
+<style>
+  html{
+    height:657px;
+  }
+  body{
+    background: #000;
+  }
+  .splash-image{
+    display: block;
+    margin: 230px auto 100px;
+  }
+  #select-project{
+    color: #ccc;
+    display: block;
+    font-family: Helvetica, Arial;
+    font-size: 16px;
+    margin:0 auto;
+    width: 430px;
+  }
+  #contact{
+    color: #666;
+    display: block;
+    font-family: Helvetica, Arial;
+    font-size: 13px;
+    margin:40px auto;
+    text-align: center;
+    width: 205px;
+  }
+  #project_name{
+    font-family: Helvetica, Arial;
+    font-size: 16px;
+  }
+  #go{
+    font-family: Helvetica, Arial;
+    font-size: 16px;
+  }
+</style>
+
+
+<%= image_tag "logo.png", :class => 'splash-image' %>
+
+<div id="select-project">
+  http://jusplan.heroku.com/
+  <input type="text" name="project_name" value="" id="project_name" placeholder= "project_name" />
+  <input type="button" name="go!" value="go!" id="go">
+</div>
+
+<span id="contact">
+  contact us! <br/>just.plan@hotmail.com
+</span>
+
+
+<script type="text/javascript" charset="utf-8">
+  // $(document).ready(function() {
+    $("#go").bind("click", function(){
+        var projectName = $("#project_name").val();
+        
+        $.ajax({
+          url: '/home_count/'+projectName,
+          type: 'POST',
+          complete: function(xhr, textStatus) {
+          }
+        });
+        
+        if (projectName) {
+            window.location = '/'+projectName;
+        };
+    });
+  // });
+</script>
