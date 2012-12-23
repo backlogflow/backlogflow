@@ -1,3 +1,5 @@
+  $height_header: 34px;
+
 #stories li.story{
   box-shadow: 2px 5px 10px #999;
 }
@@ -20,7 +22,7 @@
 		background-image: -ms-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
 		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #CCCCCC),color-stop(0.5, #ADADAD),color-stop(1, #9E9C9E));
 		           color: white;
-		          height: 29px;
+		          height: $height_header;
 		
 		> .points {
 			   background: #333;
@@ -29,7 +31,7 @@
 			        float: left;
 			  font-weight: bold;
 			  line-height: 30px;
-			       height: 29px;
+			       height: $height_header;
 			       margin: 0;
 	          padding: 0 5px;
 		}
@@ -40,6 +42,7 @@
 			  font-size: 15px;
 			font-weight: bold;
 			line-height: 30px;
+			margin-top:  2px;
 		}
 		
 		.popin-edit-status {
@@ -76,13 +79,14 @@
 		
 		> span.position{
   	     background: #888;
-  	  border-radius: 4px;
+  	  border-radius: 5px;
   	          float: right;
-  	      font-size: 14px;
   	    font-weight: bold;
-  	    line-height: 18px;
-  	         margin: 2px 2px 0 0;
-  	        padding: 2px;
+  	    line-height: 20px;
+  	         height: 20px;
+  	     margin-top: 6px;
+  	     margin-right: 2px;
+  	        padding: 1px 5px;
   	}
 		
 		.status{
@@ -93,16 +97,37 @@
 			        float: right;
 			  font-weight: bold;
 			  line-height: 20px;
-			       height: 20px;
-			       margin: 2px 2px 1px 2px;
+			   margin-top: 6px;
+			 margin-right: 2px;
 			      padding: 1px 5px;
-		}
-		.button{
-			margin:1px 2px;
 		}
 		.form{
 			float:left;
 		}
+		.deleteStory,
+		.editStory,
+		.newStory{
+  		display: block;
+  		  width: 33px;
+  		 height: 33px;
+  		  float: right;
+  		 cursor: pointer;
+  		 top: 0.5px;
+  		 margin-left: 2px;
+  		 
+      img{
+         left: 0.5px;
+          top: 0.5px;
+      }
+      
+      &:hover{
+        background: #000;
+      }
+  		 
+		}
+		
+		
+
 	}
 	
 	.attributes{

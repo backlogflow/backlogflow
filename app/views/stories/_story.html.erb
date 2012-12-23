@@ -7,15 +7,17 @@
     </span> 
 
     <div class="title"><%= story.title %></div>
+	
+	
+    <%= link_to image_tag("delete_story.png", :border=> 0), [story.project, story], :remote => true, :confirm => delete_msg(story), :method => :delete,:class => "deleteStory", :title => 'delete'  %>
+	<div class="editStory" title="edit" onclick="_gaq.push(['_trackEvent', 'edit-story-button', 'clicked'])">
+		<%= image_tag("edit_story.png", :border=> 0 , :class => "") %>
+	</div>    
+	<div class="newStory" title="new" onclick="_gaq.push(['_trackEvent', 'new-substory-button', 'clicked'])">
+		<%= image_tag("add_story.png", :border=> 0 , :class => "") %>
+    </div>
 
-    <%= link_to "X", [story.project, story], :remote => true, :confirm => delete_msg(story), :method => :delete, 
-            :class => "button delete", :title => 'delete' %>
-
-    <div class="button new-story" title="new" onclick="_gaq.push(['_trackEvent', 'new-substory-button', 'clicked'])">+</div>
-    <div class="new-story form"><%= render :partial => 'stories/form_substory', :locals => {:story => story} %></div>
-
-    <div class="button edit" onclick="_gaq.push(['_trackEvent', 'edit-story-button', 'clicked'])">edit</div>
-    <div class="edit form"><%= render :partial => 'stories/form_edit', :locals => {:story => story} %></div>
+    
 
     <% if story.is_leaf %>
       <% if story.status == "To Do" %>
@@ -24,6 +26,14 @@
       <span class="status"><%= story.status %></span>      
       <%= render :partial => 'stories/popin_status', :locals => {:story => story} %>
     <% end %>
+    
+    <!-- Formulários Tem que tirar algum pesa demais para gerar  -->
+    <div class="formEditStory form">
+    		<%= render :partial => 'stories/form_edit', :locals => {:story => story} %>
+   	</div>
+    <div class="formNewStory form">
+    		<%= render :partial => 'stories/form_substory', :locals => {:story => story} %>
+    </div> 
   </div>
 
   <div class="attributes">

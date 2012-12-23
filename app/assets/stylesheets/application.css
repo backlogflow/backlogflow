@@ -62,28 +62,11 @@ body{
 	          width: 30px;
 }
 
-.button.new-story {
+.button.new-epic {
 	background: #3b3;
 	     color: #fff;
 	 font-size: 15px;
 }
-.button.new-story:hover{
+.button.new-epic:hover{
 	background: #7f7;
-}
-
-.button.delete {
-	background: #b33;
-	     color: #fff;
-}
-.button.delete:hover {
-	background: #f77;
-}
-
-.button.edit {
-	background: #33b;
-	     color: #fff;
-}
-.button.edit:hover {
-	background: #77f;
-	     color: #fff;
 }
