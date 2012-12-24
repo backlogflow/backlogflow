@@ -1,5 +1,7 @@
-$background_top_low: #383838;
- $background_middle: #131313;
+      $background_top_low: #383838;
+       $background_middle: #131313;
+$background_top_low_hover: #8B0000;
+ $background_middle_hover: #B22222;
 #header{
      background: $background_top_low;
      box-shadow: 0px 3px 10px #999;
@@ -51,24 +53,46 @@ $background_top_low: #383838;
              height: 35px;
               clear: both;
                left: 50%;
-         
       #menu{
-                 float: right;
-            margin-top: 0px;
-          margin-right: 35px;
-                 color: #fff;  
+         padding: 0;
+          margin: 0;  
+           float: left;
+           color: #fff;
+         .link{
+            display: block;
+            text-decoration: none;
+            margin-top: -2px;
+            width: 100px;
+            height: 35px;
+            padding: 0 3px; 
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+            
+            &:hover{
+              background-image: linear-gradient(bottom, $background_top_low_hover 0%, $background_middle_hover 50%, $background_top_low_hover 100%);
+              background-image: -o-linear-gradient(bottom, $background_top_low_hover 0%, $background_middle_hover 50%, $background_top_low_hover 100%);
+              background-image: -moz-linear-gradient(bottom, $background_top_low_hover 0%, $background_middle_hover 50%, $background_top_low_hover 100%);
+              background-image: -webkit-linear-gradient(bottom, $background_top_low_hover 0%,$background_middle_hover 50%, $background_top_low_hover 100%);
+              background-image: -ms-linear-gradient(bottom, $background_top_low_hover 0%, $background_middle_hover 50%, $background_top_low_hover 100%);
+              background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $background_top_low_hover),color-stop(0.5, $background_middle_hover),color-stop(1, $background_top_low_hover));
+            }
+            .image{
+                margin-top: 5px;
+              margin-right: 5px;
+            }
+            
+       }  
       }   
-      
       .text{
-                float : left;
+                float : right;
             margin-top: 3.5px; 
              font-size: 28px;
                  color: #D3D3D3 ;
            font-weight: bold;
       }
       .icon{
-          margin-left: 30px;
-         float: left;
+         float: right;
       }
     }
   }

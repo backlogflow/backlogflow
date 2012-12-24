@@ -6,12 +6,12 @@
   <div id="header-low">
   		<% if !@project.nil? %> 
 	  		<div class="project_menu">
-		  	 	<span class="icon"> <%= image_tag("gear.png", :border=> 0, :size => '35x35' ) %> </span> 
 		  	 	<span class="text" > <%=  @project.name %> </span>
+		  	 	<span class="icon"> <%= image_tag("gear.png", :border=> 0, :size => '35x35' ) %> </span> 
 		  	 	<ul id="menu">
-	  	 		<li class="link"> <%= link_to image_tag("icon_epic.png", :border=> 0, :size => '16x16' )+'Epic'   , "/#{@project.name}/epics" , :class => "" , :title => 'Epics' %> </li>
-		  	 		<li class="link"> <%= link_to image_tag("mind_map.png", :border=> 0, :size => '16x16' )+'Mind Map', "/#{@project.name}/mindmap" , :class => "" , :title => 'Mind Map' %> </li>
-		  	 		<li class="link"> <%= link_to image_tag("board.png", :border=> 0, :size => '16x16' )+'Board'      , "/#{@project.name}/board" ,  :class => "" , :title => 'Board' %>  </li>
+	  	 			<li class="element"> <%= link_to image_tag("icon_epic.png", :border=> 0, :size => '20x20', :class=> "image" )+'Epic'   , "/#{@project.name}/epics" , :class => "link" , :title => 'Epics' %> </li>
+	  	 			<li class="element"> <%= link_to image_tag("mind_map.png", :border=> 0, :size => '20x20' , :class=> "image")+'Mind Map', "/#{@project.name}/mindmap" , :class => "link" , :title => 'Mind Map' %> </li>
+		  	 		<li class="element"> <%= link_to image_tag("board.png", :border=> 0, :size => '20x20' , :class=> "image")+'Board'      , "/#{@project.name}/board" ,  :class => "link" , :title => 'Board' %>  </li>
 		  	 	</ul>
 	  		</div>
 	  	<% end %>	  

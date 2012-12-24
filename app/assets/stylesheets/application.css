@@ -47,7 +47,6 @@ body{
 .hidden {
 	display:none;
 }
-
 .button {
 	         border: 1px solid #666;
 	  border-radius: 5px;
@@ -61,13 +60,12 @@ body{
 	text-decoration: none;
 	          width: 30px;
 }
-.link{
-		   width: 32px;
-		  height: 32px;
-	margin-right: 4px;
-		 display: inline;
+.element{
+		   width: 100px;
+		  height: 35px;
+	margin-right: 8px;
+		 display: inline-block;
 }
-
 li{
 	list-style-type: none;	
 }
