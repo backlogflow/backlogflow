@@ -61,12 +61,13 @@ body{
 	text-decoration: none;
 	          width: 30px;
 }
-
-.button.new-epic {
-	background: #3b3;
-	     color: #fff;
-	 font-size: 15px;
+.link{
+		   width: 32px;
+		  height: 32px;
+	margin-right: 4px;
+		 display: inline;
 }
-.button.new-epic:hover{
-	background: #7f7;
+
+li{
+	list-style-type: none;	
 }

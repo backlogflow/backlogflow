@@ -5,7 +5,6 @@ gem 'jquery-rails'
 gem "simple_form"
 gem 'inherited_resources'
 
-
 group :development, :test do
   gem 'jasmine'
   gem 'sqlite3'
@@ -25,8 +24,6 @@ group :test do
   gem 'simplecov', :require => false
   gem 'simplecov-rcov', :require => false
 end
-
-
 
 group :assets do
   gem 'mysql2'

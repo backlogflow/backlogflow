@@ -1,8 +1,19 @@
 <div id="header">
-  <%= image_tag "logo.png", :size => '140x35' %>
-  <!-- <span class="view">View1</span>
-  <span class="view">View2</span>  
-  <span class="view">View3</span>     -->
-  
-  <div class="new-feature">new feature! drag 'n drop on To Do mode!</div>
+  <div class="logo_news">
+  		<%= image_tag "logo.png", :size => '140x35' %>
+  		<div class="new-feature">new feature! drag 'n drop on To Do mode!</div>
+  </div>
+  <div id="header-low">
+  		<% if !@project.nil? %> 
+	  		<div class="project_menu">
+		  	 	<span class="icon"> <%= image_tag("gear.png", :border=> 0, :size => '35x35' ) %> </span> 
+		  	 	<span class="text" > <%=  @project.name %> </span>
+		  	 	<ul id="menu">
+	  	 		<li class="link"> <%= link_to image_tag("icon_epic.png", :border=> 0, :size => '16x16' )+'Epic'   , "/#{@project.name}/epics" , :class => "" , :title => 'Epics' %> </li>
+		  	 		<li class="link"> <%= link_to image_tag("mind_map.png", :border=> 0, :size => '16x16' )+'Mind Map', "/#{@project.name}/mindmap" , :class => "" , :title => 'Mind Map' %> </li>
+		  	 		<li class="link"> <%= link_to image_tag("board.png", :border=> 0, :size => '16x16' )+'Board'      , "/#{@project.name}/board" ,  :class => "" , :title => 'Board' %>  </li>
+		  	 	</ul>
+	  		</div>
+	  	<% end %>	  
+  </div>
 </div>

@@ -1,20 +1,31 @@
 JustPlan2::Application.routes.draw do
   root :to => 'application#home'
   
-  match '/changes/report' => 'projects#report'
-  match '/project/:project_id/story/:id/update_status/:status' => 'stories#update_status'
-  match "/project/:project_id/filter/:status" => 'projects#filter'
-  
-  match '/project/:project_id/story/order' => 'stories#order'
-  match '/home_count/(:project_name)' => 'projects#home_count'
-  
   resources :projects do
     resources :stories
   end
   
-  match '/project/:id/stories.json' => 'projects#stories_for_mind_map'
-  match '/:project_name/mind_map' => 'projects#mind_map'
+  #Rota para quando entra no projeto
   match '/:project_name' => 'projects#show'
+  
+  #Links Principais  
+  match '/:project_name/mindmap' => 'projects#mind_map'
+  #match '/:project_name/board'   => ''
+  match '/:project_name/epics'   => 'projects#show'
+
+  #Rota para atualizar o status da  historia
+  match '/project/:project_id/story/:id/update_status/:status' => 'stories#update_status'
+  
+  #Rota para filtrar as histórias de acordo com seu status
+  match "/project/:project_id/filter/:status" => 'projects#filter'
+
+  #AJUDA  
+  match '/project/:project_id/story/order' => 'stories#order'
+  match '/changes/report' => 'projects#report'
+  match '/home_count/(:project_name)' => 'projects#home_count'
+  match '/project/:id/stories.json' => 'projects#stories_for_mind_map'
+  
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

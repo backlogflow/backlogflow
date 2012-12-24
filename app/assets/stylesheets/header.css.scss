@@ -1,21 +1,75 @@
+$background_top_low: #383838;
+ $background_middle: #131313;
 #header{
-  background: #383838;
-  box-shadow: 0px 3px 10px #999;
-	    height: 50px;
-	  position: fixed;
-	      left: 0px;
-	       top: 0px;
-	     width: 100%;
-	   z-index: 101;
-
-  img{
-		 float: left;
-    margin: 7px 0 0 20px;   
-	}
-	
-	.new-feature{
-         color: #ccc;
-        margin: 14px 50px 0 0;
-    text-align: right;
+     background: $background_top_low;
+     box-shadow: 0px 3px 10px #999;
+	       height: 80px;
+	     position: fixed;
+	         left: 0px;
+	          top: 0px;
+	        width: 100%;
+	      z-index: 101;
+	   border-top: 4px #8B0000 solid;
+  
+  .logo_news{
+        position: absolute;
+            left: 50%;
+           width: 100%;
+          height: 45px;
+           width: 940px;
+     margin-left: -470px;    
+     
+     img{
+         float: left;
+        margin: 7px 0 0 20px;   
+     }
+    
+    .new-feature{
+     line-height: 30px;
+           float: right;
+           width: 500px;
+           color: #ccc;
+      text-align: right;
+      margin-top: 10px;
+    } 
+  }
+  #header-low{
+    background-image: linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -o-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -moz-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -webkit-linear-gradient(bottom, $background_top_low 0%,$background_middle 50%, $background_top_low 100%);
+    background-image: -ms-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $background_top_low),color-stop(0.5, $background_middle),color-stop(1, $background_top_low));
+               width: 100%;
+              height: 35px;
+          margin-top: 45px;
+       border-bottom: 1px #8B0000 solid;
+    .project_menu{
+           position: absolute;
+        margin-left: -470px;    
+              width: 940px;
+             height: 35px;
+              clear: both;
+               left: 50%;
+         
+      #menu{
+                 float: right;
+            margin-top: 0px;
+          margin-right: 35px;
+                 color: #fff;  
+      }   
+      
+      .text{
+                float : left;
+            margin-top: 3.5px; 
+             font-size: 28px;
+                 color: #D3D3D3 ;
+           font-weight: bold;
+      }
+      .icon{
+          margin-left: 30px;
+         float: left;
+      }
+    }
   }
 }
