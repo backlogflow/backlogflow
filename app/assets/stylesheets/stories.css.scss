@@ -1,4 +1,6 @@
   $height_header: 34px;
+$background_top_low: #2e2e2e;
+$background_middle: #686868;
 
 #stories li.story{
   box-shadow: 2px 5px 10px #999;
@@ -18,17 +20,17 @@
 	}
 	
 	.story-header{
-		background-image: linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
-		background-image: -o-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
-		background-image: -moz-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
-		background-image: -webkit-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
-		background-image: -ms-linear-gradient(bottom, #CCCCCC 0%, #ADADAD 50%, #9E9C9E 100%);
-		background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, #CCCCCC),color-stop(0.5, #ADADAD),color-stop(1, #9E9C9E));
+ background-image: linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -o-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -moz-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -webkit-linear-gradient(bottom, $background_top_low 0%,$background_middle 50%, $background_top_low 100%);
+    background-image: -ms-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $background_top_low),color-stop(0.5, $background_middle),color-stop(1, $background_top_low));
 		           color: white;
 		          height: $height_header;
 		
 		> .points {
-			   background: #333;
+			   background: #000;
 	     border-right: 1pxsolid #333333;
 	    border-radius: 4px;
 			        float: left;
@@ -57,7 +59,7 @@
 			       height: 28px;
 			        right: -100px;
 			     position: relative;
-			          top: -28px;
+			          top: -20px;
 			        width: 144px;
 			
 			.status-buttons{
