@@ -1,0 +1,8 @@
+<div id="board_<%= column %>" >
+	<div class="name_column"> <%= column %> </div> 
+	<% stories.each do |story| %>
+		<div class="postit color_done">
+			<p><%= story.title %></p>
+		</div>
+	<%end%> 	    
+</div>

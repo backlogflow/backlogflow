@@ -1,3 +1,28 @@
 // Place all the styles related to the board controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#board_todo,
+#board_doing,
+#board_done
+{
+  margin-top: 100px;
+  width: 33%;
+  min-height: 400px;
+  float: left;
+  
+  .name_column{
+    text-transform: uppercase;
+    text-align: center;
+    font-family: 'Stoke', serif;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}
+#board_todo{
+  border-right: 3px #000 dashed;
+  height: 600px;
+}
+
+#board_doing{
+  border-right: 3px #000 dashed;
+}

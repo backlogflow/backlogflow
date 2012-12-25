@@ -23,6 +23,8 @@ function adjustGrid(){
   }
 }
 
+
+
 function positionPopin(){
 	var visiblePopin = $('.popin:not(.hidden)');
 	if(visiblePopin.length > 0){
@@ -40,6 +42,10 @@ window.onresize = function(e){
 }
 window.onscroll = function(){
 	positionPopin();
+}
+
+window.onload = function(){
+	$('div[id^="board_"]').height($('div[id^="board_"]').height());
 }
 
 $(".newStory").live("click",function(){
