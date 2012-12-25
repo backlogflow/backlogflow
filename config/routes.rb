@@ -10,7 +10,7 @@ JustPlan2::Application.routes.draw do
   
   #Links Principais  
   match '/:project_name/mindmap' => 'projects#mind_map'
-  #match '/:project_name/board'   => ''
+  match '/:project_name/board'   => 'board#show'
   match '/:project_name/epics'   => 'projects#show'
 
   #Rota para atualizar o status da  historia
