@@ -1,5 +1,5 @@
 $not-selected: #888;
-$selected: #555;
+    $selected: #555;
 
 .project-info{
       height: 20px;
@@ -32,10 +32,10 @@ $selected: #555;
   }
   
 	.button{
-		background: $not-selected;
-	       color: white;
-		    margin: 0 2px;
-		     width: 50px;
+		     background: $not-selected;
+	            color: white;
+		         margin: 0 2px;
+		          width: 50px;
 		list-style-type: none;
 		
 		&.clicked{

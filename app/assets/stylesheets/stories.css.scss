@@ -1,6 +1,6 @@
-  $height_header: 34px;
+     $height_header: 34px;
 $background_top_low: #2e2e2e;
-$background_middle: #686868;
+ $background_middle: #686868;
 
 #stories li.story{
   box-shadow: 2px 5px 10px #999;
@@ -12,7 +12,7 @@ $background_middle: #686868;
 	border-radius: 5px;
 	   margin-top: 15px;
 	margin-bottom: 10px;
-	margin-right: 10px;
+	 margin-right: 10px;
 	
 	&.epic{
 		
@@ -20,7 +20,7 @@ $background_middle: #686868;
 	}
 	
 	.story-header{
- background-image: linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
     background-image: -o-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
     background-image: -moz-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
     background-image: -webkit-linear-gradient(bottom, $background_top_low 0%,$background_middle 50%, $background_top_low 100%);
@@ -47,7 +47,7 @@ $background_middle: #686868;
 			  font-size: 15px;
 			font-weight: bold;
 			line-height: 30px;
-			margin-top:  2px;
+			 margin-top:  2px;
 	}
 		
 		.popin-edit-status {
@@ -112,13 +112,13 @@ $background_middle: #686868;
 		.deleteStory,
 		.editStory,
 		.newStory{
-  		display: block;
-  		  width: 33px;
-  		 height: 33px;
-  		  float: right;
-  		 cursor: pointer;
-  		 top: 0.5px;
-  		 margin-left: 2px;
+  		    display: block;
+  		      width: 33px;
+  		     height: 33px;
+  		      float: right;
+  		     cursor: pointer;
+  		        top: 0.5px;
+  		margin-left: 2px;
   		 
       img{
          left: 0.5px;

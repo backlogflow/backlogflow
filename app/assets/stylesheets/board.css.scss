@@ -6,21 +6,41 @@
 #board_done
 {
   margin-top: 100px;
-  width: 33%;
+       width: 33%;
   min-height: 400px;
-  float: left;
+       float: left;
   
   .name_column{
     text-transform: uppercase;
-    text-align: center;
-    font-family: 'Stoke', serif;
-    font-weight: bold;
-    font-size: 18px;
+        text-align: center;
+       font-family: 'Stoke', serif;
+       font-weight: bold;
+         font-size: 18px;
+  }
+  
+  .postit{
+                    float: left;
+               margin-top: 5px;
+             margin-right: 5px;
+                    width: 100px;
+                   height: 100px;
+              font-family: 'Grand Hotel', cursive;
+                font-size: 18px;
+               background: #FA7F72;
+       -moz-border-radius: 7px;
+    -webkit-border-radius: 7px;
+            border-radius: 7px;
+              margin-left: 2px;
+    .title{
+          display: block;
+      margin-left: 5px;
+       margin-top: 5px;
+    }
   }
 }
 #board_todo{
   border-right: 3px #000 dashed;
-  height: 600px;
+        height: 600px;
 }
 
 #board_doing{
