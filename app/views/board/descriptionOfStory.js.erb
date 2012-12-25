@@ -1,0 +1,3 @@
+var description = $('<%=j (render(:partial => "description" , :locals => {:story => @story}))%>');
+$('#description').html(description);
+$('#description').slideDown('fast');

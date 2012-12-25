@@ -19,6 +19,10 @@ JustPlan2::Application.routes.draw do
   #Rota para filtrar as histórias de acordo com seu status
   match "/project/:project_id/filter/:status" => 'projects#filter'
 
+  #Rota para filtar a descricao da historia
+  
+  match "/project/:story_id/story/description" => 'board#descriptionOfStory'
+
   #AJUDA  
   match '/project/:project_id/story/order' => 'stories#order'
   match '/changes/report' => 'projects#report'

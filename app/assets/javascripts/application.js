@@ -44,6 +44,7 @@ window.onscroll = function(){
 	positionPopin();
 }
 
+//Para fazer com que todos as colunas fiquem com a mesma altura.
 window.onload = function(){
 	$('div[id^="board_"]').height($('div[id^="board_"]').height());
 }
@@ -82,6 +83,14 @@ $(".editStory").live("click",function(){
 	}
 });
 
+$('.postit').live('click',function(){
+	 var id = $(this).find("input").val(); 
+	 var path = "/project/"+id+"/story/description";
+	 $.ajax(path);
+});
+
+
+
 //expand/collapse
 // $('#stories .story .story-header').live('click', function(){
 // 	var elements = $( '.attributes', $(this).parent());
@@ -96,6 +105,7 @@ $(".editStory").live("click",function(){
 document.onkeyup=function(e) {
 	if(e.which == 27 /*esc*/){
 		$("div.popin").addClass("hidden");
+		$("#description").slideUp("fast");
 	}
 }
 

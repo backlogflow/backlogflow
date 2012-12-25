@@ -7,4 +7,8 @@ class BoardController < ApplicationController
       @stories_doing = @project.doing_stories;
       @stories_done  = @project.done_stories;
   end
+  
+  def  descriptionOfStory
+      @story = Story.where(:id => params[:story_id]).first
+  end
 end

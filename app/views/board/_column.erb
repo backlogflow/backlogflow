@@ -3,6 +3,7 @@
 	<% stories.each do |story| %>
 		<div class="postit">
 			<span class="title"><%= story.title %></span>
+			<input type="hidden" class="id_story" value="<%= story.id %>" >
 		</div>
 	<%end%> 	    
 </div>
