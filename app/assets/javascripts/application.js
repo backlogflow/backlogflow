@@ -23,8 +23,6 @@ function adjustGrid(){
   }
 }
 
-
-
 function positionPopin(){
 	var visiblePopin = $('.popin:not(.hidden)');
 	if(visiblePopin.length > 0){
@@ -44,17 +42,26 @@ window.onscroll = function(){
 	positionPopin();
 }
 
-//Para fazer com que todos as colunas fiquem com a mesma altura.
-window.onload = function(){
-	$('div[id^="board_"]').height($('div[id^="board_"]').height());
-}
-
-$(".newStory").live("click",function(){
-	var $popin = $( ".formNewStory .popin", $(this).parent() );
+$(".button.new-epic").live("click",function(){
+	var $popin = $( ".new-story.popin", $(this).parent() );
 	if($popin.hasClass("hidden")){		
 		$('div.popin').addClass("hidden");
 		$popin.removeClass("hidden");
-		
+
+		$('input#story_title', $popin).focus();
+		var select = $("select", $popin)[0];
+		select.selectedIndex = 0;
+		removeEmptyOptionFromSelect($popin);
+		positionPopin();
+	}
+});
+
+$(".newStory").live("click",function(){
+	var $popin = $( ".new-story.popin", $(this).parent() );
+	if($popin.hasClass("hidden")){		
+		$('div.popin').addClass("hidden");
+		$popin.removeClass("hidden");
+
 		$('input#story_title', $popin).focus();
 		var select = $("select", $popin)[0];
 		select.selectedIndex = 0;
@@ -64,51 +71,32 @@ $(".newStory").live("click",function(){
 });
 
 $(".editStory").live("click",function(){
-	var $popin = $( ".formEditStory .popin", $(this).parent() );
+	var $popin = $( ".edit.popin", $(this).parent() );
 
 	if($popin.hasClass("hidden")){
 		var $story = $popin.parents('li.story').eq(0);
 		var $attributes = $('> .attributes', $story);
 		$('div.popin').addClass("hidden");
 		$popin.removeClass("hidden");
-		
+
 		$("#story_title", $popin).val($(".title", $story).eq(0).text());
 		$("#story_description", $popin).val($(".user-story", $attributes).eq(0).text());
 		$("#story_details", $popin).val($(".details", $attributes).eq(0).text());
 		$("#story_value", $popin).val($(".value", $attributes).eq(0).text());
-		
+
 		$('input#story_title', $popin).focus();
 		removeEmptyOptionFromSelect($popin);
 		positionPopin();
 	}
 });
 
-$('.postit').live('click',function(){
-	 var id = $(this).find("input").val(); 
-	 var path = "/project/"+id+"/story/description";
-	 $.ajax(path);
-});
-
-
-
-//expand/collapse
-// $('#stories .story .story-header').live('click', function(){
-// 	var elements = $( '.attributes', $(this).parent());
-// 	if(elements.hasClass("hidden")){
-// 		elements.removeClass("hidden");
-// 	}else{
-// 		$( '.attributes', $(this).parent()).addClass("hidden");
-// 	}
-// });
-
-// quando pressionar esc fecha todos os popins
+//quando pressionar esc fecha todos os popins
 document.onkeyup=function(e) {
 	if(e.which == 27 /*esc*/){
 		$("div.popin").addClass("hidden");
 		$("#description").slideUp("fast");
 	}
 }
-
 
 $('.button.cancel').live('click', function(){
 	$("div.popin").addClass("hidden");
@@ -120,10 +108,20 @@ $(".story-header .status").live("mouseover", function(){
 $(".story-header .status").live("mouseout", function(){
 	$(".popin-edit-status", $(this).parent()).addClass("hidden");
 });
-
 $(".story-header .popin-edit-status").live("mouseover", function(){
 	$(this).removeClass("hidden");
 });
 $(".story-header .popin-edit-status").live("mouseout", function(){
 	$(this).addClass("hidden");
+});
+
+//Para fazer com que todos as colunas fiquem com a mesma altura.
+window.onload = function(){
+	$('div[id^="board_"]').height($('div[id^="board_"]').height());
+}
+
+$('.postit').live('click',function(){
+	 var id = $(this).find("input").val(); 
+	 var path = "/project/"+id+"/story/description";
+	 $.ajax(path);
 });
