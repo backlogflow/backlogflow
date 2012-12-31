@@ -31,9 +31,9 @@ class StoriesControllerTest < ActionController::TestCase
   end
   
   test "update status" do
-    assert_equal "To Do", @story.status
-    put :update_status, :id => @story, :project_id => @story.project.id, :status => "Done", :format => "js"
-    assert_equal "Done", Story.find(@story.id).status
+    assert_equal "TO DO", @story.status
+    put :update_status, :id => @story, :project_id => @story.project.id, :status => "DONE", :format => "js"
+    assert_equal "DONE", Story.find(@story.id).status
   end
   
   test "test order by position" do

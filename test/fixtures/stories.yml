@@ -7,7 +7,7 @@ done_leaf:
   details: MyString
   points: 1
   value: MyString
-  status: Done
+  status: DONE
   project_id: 1
     
 doing_leaf:
@@ -17,7 +17,7 @@ doing_leaf:
   details: MyString
   points: 1
   value: MyString
-  status: Doing
+  status: DOING
   project_id: 1
   parent_story: 8
     
@@ -28,7 +28,7 @@ one:
   details: MyString
   points: 1
   value: MyString
-  status: "To Do"
+  status: "TO DO"
   project_id: 1
 
 two:
@@ -38,7 +38,7 @@ two:
   details: MyString
   points: 1
   value: MyString
-  status: "To Do"
+  status: "TO DO"
   project_id: 1
   parent_story: 1
   position: 1
@@ -50,7 +50,7 @@ three:
   details: MyString
   points: 1
   value: MyString
-  status: "To Do"
+  status: "TO DO"
   project_id: 2
   
 four:
@@ -60,7 +60,7 @@ four:
   details: MyString
   points: 1
   value: MyString
-  status: "To Do"
+  status: "TO DO"
   project_id: 2
   parent_story: 3  
   
@@ -71,7 +71,7 @@ five:
   details: MyString
   points: 1
   value: MyString
-  status: "To Do"
+  status: "TO DO"
   project_id: 2
   parent_story: 3  
 
@@ -82,7 +82,7 @@ eight:
   details: MyString
   points: 1
   value: MyString
-  status: Doing
+  status: DOING
   project_id: 1
   
 nine:
@@ -92,7 +92,7 @@ nine:
   details: MyString
   points: 1
   value: MyString
-  status: "To Do"
+  status: "TO DO"
   project_id: 1
   position: 2
   
@@ -103,6 +103,6 @@ ten:
   details: MyString
   points: 1
   value: MyString
-  status: "To Do"
+  status: "TO DO"
   project_id: 1
   position: 2
