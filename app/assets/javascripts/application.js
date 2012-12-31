@@ -134,6 +134,17 @@ window.onload = function(){
 	});
 }
 
+$('.story-header').live('click',function(){
+	if($(this).siblings('.story-body:not(:visited)').css('display') == "none"){
+		 $(this).siblings('.story-body').slideDown();
+	}else{
+		if($(this).parent().hasClass('epic')){
+			$(this).parent().find('.story-body').slideUp();
+		}else{
+			$(this).siblings('.story-body').slideUp();
+		}
+	}
+});
 
 $('.postit').live('click',function(){
 	 var id = $(this).find("input").val(); 

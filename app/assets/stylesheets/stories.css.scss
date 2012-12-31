@@ -28,6 +28,7 @@ $background_top_low: #2e2e2e;
     background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $background_top_low),color-stop(0.5, $background_middle),color-stop(1, $background_top_low));
 		           color: white;
 		          height: $height_header;
+		          
 		
 		> .points {
 			   background: #000;
