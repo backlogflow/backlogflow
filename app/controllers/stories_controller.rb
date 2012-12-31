@@ -11,7 +11,7 @@ class StoriesController < InheritedResources::Base
       parent_story.save
     end
     destroy!
-    if @story.status == 'To Do'
+    if @story.status == Project::Status[:TODO]
       @story.project.update_position
     end
   end
@@ -22,7 +22,7 @@ class StoriesController < InheritedResources::Base
       @project.switch_position params["story"]["position"].to_i
     end
     params["story"]["points"] = -1 if( params["story"]["points"].nil? or params["story"]["points"] == "" or params["story"]["points"] == "?" )
-    params["story"]["status"] = "To Do" if( params["story"]["status"].nil? or params["story"]["status"] == "" )
+    params["story"]["status"] = Project::Status[:TODO] if( params["story"]["status"].nil? or params["story"]["status"] == "" )
     params["story"]["position"] = @project.greatest_position + 1 if( params["story"]["position"].nil? )
     create!
   end
@@ -44,13 +44,13 @@ class StoriesController < InheritedResources::Base
     story = Story.find params["id"]
     old_status = story.status
     story.status = params["status"]
-    if params["status"] == "Done"
+    if params["status"] == Project::Status[:DONE]
       story.done_date = Time.now
     end
     story.save
     @project = story.project
 
-    if old_status == 'To Do' or params["status"] == 'To Do'
+    if old_status == Project::Status[:TODO] or params["status"] == Project::Status[:TODO]
       @project.update_position
     end
 

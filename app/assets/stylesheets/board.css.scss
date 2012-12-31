@@ -1,9 +1,7 @@
 // Place all the styles related to the board controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-#board_todo,
-#board_doing,
-#board_done
+.column
 {
   margin-top: 100px;
        width: 33%;
@@ -38,11 +36,8 @@
     }
   }
 }
-#board_todo{
-  border-right: 3px #000 dashed;
-}
-
-#board_doing{
+#board_DOING{
+  border-left: 3px #000 dashed;
   border-right: 3px #000 dashed;
 }
 

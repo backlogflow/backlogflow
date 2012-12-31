@@ -1,22 +1,22 @@
 <div class="popin-edit-status hidden">
   <div class="status-buttons">
-    <% if story.status == "Done" %>
-      <div class="button clicked">Done</div>
+    <% if story.status == Project::Status[:DONE] %>
+      <div class="button clicked"><%= Project::Status[:DONE] %></div>
     <% else %>
-      <%= link_to 'Done', "/project/#{story.project.id}/story/#{story.id}/update_status/Done", :remote => true, :class => 'button' %>
+      <%= link_to Project::Status[:DONE], "/project/#{story.project.id}/story/#{story.id}/update_status/#{Project::Status[:DONE]}", :remote => true, :class => 'button' %>
     <% end %>
     
     
-    <% if story.status == "Doing" %>
-      <div class="button clicked">Doing</div>    
+    <% if story.status == Project::Status[:DOING] %>
+      <div class="button clicked">Project::Status[:DOING]</div>    
     <% else %>
-      <%= link_to 'Doing', "/project/#{story.project.id}/story/#{story.id}/update_status/Doing", :remote => true, :class => 'button' %>
+      <%= link_to Project::Status[:DOING], "/project/#{story.project.id}/story/#{story.id}/update_status/#{Project::Status[:DOING]}", :remote => true, :class => 'button' %>
     <% end %>
     
-    <% if story.status == "To Do" %>
-      <div class="button clicked">To Do</div>      
+    <% if story.status == Project::Status[:TODO] %>
+      <div class="button clicked"><%= Project::Status[:TODO] %></div>      
     <% else %>
-      <%= link_to 'To Do', "/project/#{story.project.id}/story/#{story.id}/update_status/To Do", :remote => true, :class => 'button' %>    
+      <%= link_to Project::Status[:TODO], "/project/#{story.project.id}/story/#{story.id}/update_status/#{Project::Status[:TODO]}", :remote => true, :class => 'button' %>    
     <% end %>
 
   </div>

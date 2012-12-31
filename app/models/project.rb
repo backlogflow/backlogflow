@@ -3,6 +3,12 @@ class Project < ActiveRecord::Base
   validates_presence_of :name
   has_many :stories, :class_name => "Story"
   
+  Status = {
+     :TODO => "TO DO",
+    :DOING => "DOING",
+     :DONE => "DONE"  
+  }
+ 
   def epics
     self.stories.where(:parent_story => nil).order("created_at DESC")
   end
@@ -18,7 +24,7 @@ class Project < ActiveRecord::Base
   
   
   def done_stories
-    stories = self.stories.where(:status => 'Done').order('done_date DESC')
+    stories = self.stories.where(:status => Project::Status[:DONE]).order('done_date DESC')
     stories.select do |story|
       story.is_leaf
     end
@@ -26,7 +32,7 @@ class Project < ActiveRecord::Base
   
   
   def doing_stories
-    stories = self.stories.where(:status => 'Doing').order(:updated_at)
+    stories = self.stories.where(:status => Project::Status[:DOING]).order(:updated_at)
     stories.select do |story|
       story.is_leaf
     end
@@ -34,7 +40,7 @@ class Project < ActiveRecord::Base
   
   
   def todo_stories
-    stories = self.stories.where(:status => 'To Do').order(:position)
+    stories = self.stories.where(:status => Project::Status[:TODO]).order(:position)
     stories.select do |story|
       story.is_leaf
     end
@@ -62,11 +68,11 @@ class Project < ActiveRecord::Base
   
   
   def filtered_stories status
-    if status == 'Done'
+    if status == Project::Status[:DONE]
       return self.done_stories
-    elsif status == 'Doing'
+    elsif status == Project::Status[:DOING]
       return self.doing_stories
-    elsif status == 'To Do'
+    elsif status == Project::Status[:TODO]
       return self.todo_stories
     else
       return []

@@ -1,4 +1,4 @@
-<%= render :partial => 'column', :locals => {:stories => @stories_todo  , :column =>"todo"} %>
-<%= render :partial => 'column', :locals => {:stories => @stories_doing , :column =>"doing"} %>
-<%= render :partial => 'column', :locals => {:stories => @stories_done  , :column =>"done"} %>
+<%= render :partial => 'column', :locals => {:stories => @stories_todo  , :column =>Project::Status[:TODO]} %>
+<%= render :partial => 'column', :locals => {:stories => @stories_doing , :column =>Project::Status[:DOING]} %>
+<%= render :partial => 'column', :locals => {:stories => @stories_done  , :column =>Project::Status[:DONE]} %>
 <div id="description"> </div>
