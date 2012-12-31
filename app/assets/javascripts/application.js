@@ -5,6 +5,7 @@
 // the compiled file.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
 
@@ -118,7 +119,21 @@ $(".story-header .popin-edit-status").live("mouseout", function(){
 //Para fazer com que todos as colunas fiquem com a mesma altura.
 window.onload = function(){
 	$('div[id^="board_"]').height($('div[id^="board_"]').height());
+	$(".postit").draggable({
+		revert: true
+	});
+	$('div[id^="board_"]').droppable({
+		     drop: function(event, ui) {
+		    	 $(ui.draggable).appendTo($(this));
+		    	 var id_project = $("#project_id").html();
+		    	 var id_story   = $(ui.draggable).find("input").val(); 
+		    	 var story_status = $.trim($(this).find(".name_column").html());
+		    	 var path = "/project/"+id_project+"/story/"+id_story+"/update_status/"+story_status;
+		    	 $.ajax(path);
+		     }
+	});
 }
+
 
 $('.postit').live('click',function(){
 	 var id = $(this).find("input").val(); 

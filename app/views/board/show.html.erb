@@ -1,3 +1,4 @@
+<span id="project_id" class="hidden"><%= @project.id %></span>
 <%= render :partial => 'column', :locals => {:stories => @stories_todo  , :column =>Project::Status[:TODO]} %>
 <%= render :partial => 'column', :locals => {:stories => @stories_doing , :column =>Project::Status[:DOING]} %>
 <%= render :partial => 'column', :locals => {:stories => @stories_done  , :column =>Project::Status[:DONE]} %>

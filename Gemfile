@@ -2,6 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.2.9'
 gem 'jquery-rails'
+gem 'jquery-ui-rails', '~> 3.0.0'
 gem "simple_form"
 gem 'inherited_resources'
 gem 'mysql2'
