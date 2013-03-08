@@ -5,7 +5,6 @@
 // the compiled file.
 //
 //= require jquery
-//= require jquery-ui
 //= require jquery_ujs
 //= require_tree .
 
@@ -43,7 +42,7 @@ window.onscroll = function(){
 	positionPopin();
 }
 
-$(".button.new-epic").live("click",function(){
+$(".button.new-story").live("click",function(){
 	var $popin = $( ".new-story.popin", $(this).parent() );
 	if($popin.hasClass("hidden")){		
 		$('div.popin').addClass("hidden");
@@ -57,21 +56,7 @@ $(".button.new-epic").live("click",function(){
 	}
 });
 
-$(".newStory").live("click",function(){
-	var $popin = $( ".new-story.popin", $(this).parent() );
-	if($popin.hasClass("hidden")){		
-		$('div.popin').addClass("hidden");
-		$popin.removeClass("hidden");
-
-		$('input#story_title', $popin).focus();
-		var select = $("select", $popin)[0];
-		select.selectedIndex = 0;
-		removeEmptyOptionFromSelect($popin);
-		positionPopin();
-	}
-});
-
-$(".editStory").live("click",function(){
+$(".button.edit").live("click",function(){
 	var $popin = $( ".edit.popin", $(this).parent() );
 
 	if($popin.hasClass("hidden")){
@@ -91,11 +76,9 @@ $(".editStory").live("click",function(){
 	}
 });
 
-//quando pressionar esc fecha todos os popins
 document.onkeyup=function(e) {
 	if(e.which == 27 /*esc*/){
 		$("div.popin").addClass("hidden");
-		$("#description").slideUp("fast");
 	}
 }
 
@@ -116,38 +99,5 @@ $(".story-header .popin-edit-status").live("mouseout", function(){
 	$(this).addClass("hidden");
 });
 
-//Para fazer com que todos as colunas fiquem com a mesma altura.
-window.onload = function(){
-	$('div[id^="board_"]').height($('div[id^="board_"]').height());
-	$(".postit").draggable({
-		revert: true
-	});
-	$('div[id^="board_"]').droppable({
-		     drop: function(event, ui) {
-		    	 $(ui.draggable).appendTo($(this));
-		    	 var id_project = $("#project_id").html();
-		    	 var id_story   = $(ui.draggable).find("input").val(); 
-		    	 var story_status = $.trim($(this).find(".name_column").html());
-		    	 var path = "/project/"+id_project+"/story/"+id_story+"/update_status/"+story_status;
-		    	 $.ajax(path);
-		     }
-	});
-}
 
-$('.story-header').live('click',function(){
-	if($(this).siblings('.story-body:not(:visited)').css('display') == "none"){
-		 $(this).siblings('.story-body').slideDown();
-	}else{
-		if($(this).parent().hasClass('epic')){
-			$(this).parent().find('.story-body').slideUp();
-		}else{
-			$(this).siblings('.story-body').slideUp();
-		}
-	}
-});
-
-$('.postit').live('click',function(){
-	 var id = $(this).find("input").val(); 
-	 var path = "/project/"+id+"/story/description";
-	 $.ajax(path);
-});
+ 
