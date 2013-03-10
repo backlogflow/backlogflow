@@ -2,6 +2,7 @@
 <div class="project-info">
   <span id="project_id" class="hidden"><%= @project.id %></span>
   <div class="button new-epic" onclick="_gaq.push(['_trackEvent', 'new-epic', 'clicked'])">new epic</div>
+  
   <div class="form">
     <%= render :partial => 'stories/form'%>
   </div>
