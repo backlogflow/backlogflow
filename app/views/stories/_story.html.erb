@@ -8,14 +8,8 @@
 
     <div class="title"><%= story.title %></div>
 
-    <%= link_to "X", [story.project, story], :remote => true, :confirm => delete_msg(story), :method => :delete, 
-            :class => "button delete", :title => 'delete' %>
-
-    <div class="button new-story" title="new" onclick="_gaq.push(['_trackEvent', 'new-substory-button', 'clicked'])">+</div>
-    <div class="new-story form"><%= render :partial => 'stories/form_substory', :locals => {:story => story} %></div>
-
-    <div class="button edit" onclick="_gaq.push(['_trackEvent', 'edit-story-button', 'clicked'])">edit</div>
-    <div class="edit form"><%= render :partial => 'stories/form_edit', :locals => {:story => story} %></div>
+    <%= link_to image_tag("delete.png", :border=> 0), [story.project, story], :remote => true, :confirm => delete_msg(story), :method => :delete, 
+            :class => "delete", :title => 'delete' %>
 
     <% if story.is_leaf %>
       <% if story.status == "To Do" %>
@@ -25,14 +19,21 @@
       <%= render :partial => 'stories/popin_status', :locals => {:story => story} %>
     <% end %>
   </div>
+  
+  <div class="new-story form"><%= render :partial => 'stories/form_substory', :locals => {:story => story} %></div>
+  <div class="edit form"><%= render :partial => 'stories/form_edit', :locals => {:story => story} %></div>
 
   <div class="attributes">
-    <% if story.description != "" %><p class="user-story"><%= story.description %>   </p><%end%>
-    <% if story.details     != "" %><p class="details"><%= raw( nl2br(story.details) ) %>       </p><%end%>
+    <% if story.description != "" %><p class="user-story"><%= story.description %></p> <%end%>
+    <% if story.details     != "" %><p class="details"><%= raw( nl2br(story.details) ) %></p> <% else %> <p > Click to edit </p> <%end%>
     <% if story.value       != "" %><p><strong>Value:</strong> <span class="value"><%= story.value %></span>  </p><%end%>
   </div>
-
+  
   <% if not story.children_stories.empty? %>
     <%= render :partial => 'stories/substories_list', :locals => { :parent_story => story } %>
   <% end %>
+  
+  <div class="new-story" title="new" onclick="_gaq.push(['_trackEvent', 'new-substory-button', 'clicked'])"> 
+  	<p>Click to add a user story</p>
+  </div>
 </li>

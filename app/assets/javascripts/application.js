@@ -42,48 +42,22 @@ window.onscroll = function(){
 	positionPopin();
 }
 
-$(".button.new-story").live("click",function(){
-	var $popin = $( ".new-story.popin", $(this).parent() );
-	if($popin.hasClass("hidden")){		
-		$('div.popin').addClass("hidden");
-		$popin.removeClass("hidden");
-
-		$('input#story_title', $popin).focus();
-		var select = $("select", $popin)[0];
-		select.selectedIndex = 0;
-		removeEmptyOptionFromSelect($popin);
-		positionPopin();
-	}
+$(".new-story").live("click",function(){
+	$(this).parent().children(".new-story.form").find(".popin.new-story").show();
 });
 
-$(".button.edit").live("click",function(){
-	var $popin = $( ".edit.popin", $(this).parent() );
-
-	if($popin.hasClass("hidden")){
-		var $story = $popin.parents('li.story').eq(0);
-		var $attributes = $('> .attributes', $story);
-		$('div.popin').addClass("hidden");
-		$popin.removeClass("hidden");
-
-		$("#story_title", $popin).val($(".title", $story).eq(0).text());
-		$("#story_description", $popin).val($(".user-story", $attributes).eq(0).text());
-		$("#story_details", $popin).val($(".details", $attributes).eq(0).text());
-		$("#story_value", $popin).val($(".value", $attributes).eq(0).text());
-
-		$('input#story_title', $popin).focus();
-		removeEmptyOptionFromSelect($popin);
-		positionPopin();
-	}
+$(".attributes").live("click",function(){
+	$(this).parent().children(".edit.form").find(".popin.edit").show();
 });
 
 document.onkeyup=function(e) {
 	if(e.which == 27 /*esc*/){
-		$("div.popin").addClass("hidden");
+		$(".popin").hide();
 	}
 }
 
 $('.button.cancel').live('click', function(){
-	$("div.popin").addClass("hidden");
+	$(".popin").hide();
 });
 
 $(".story-header .status").live("mouseover", function(){
