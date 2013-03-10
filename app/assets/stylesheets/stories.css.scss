@@ -42,13 +42,14 @@ $background_top_low: #2e2e2e;
 	          padding: 0 5px;
 	}
 	.title {
-		       cursor: default;
+		       cursor: n-resize;
 			margin-left: 5px;
 			      float: left;
 			  font-size: 15px;
 			font-weight: bold;
 			line-height: 30px;
 			 margin-top:  2px;
+			 min-width: 200px;
 	}
 		
 		.popin-edit-status {
@@ -110,29 +111,31 @@ $background_top_low: #2e2e2e;
 		.form{
 			float:left;
 		}
-		.deleteStory,
-		.editStory,
-		.newStory{
+		.delete{
   		    display: block;
-  		      width: 33px;
-  		     height: 33px;
+  		      width: 20px;
+  		     height: 32px;
   		      float: right;
   		     cursor: pointer;
   		        top: 0.5px;
-  		margin-left: 2px;
+  		  margin-left: 10px;
+         margin-top: -10px;
   		 
       img{
          left: 0.5px;
           top: 0.5px;
-      }
-      
-      &:hover{
-        background: #000;
-      }
-  		 
+      }  		 
 		}
 	}
 	.attributes{
 		margin: 0 0 0 20px;
+	}
+	
+	.linkForStory{
+	  margin-left: 20px;
+     font-style: italic;
+    font-weight: bolder;
+      font-size: 15px;
+         cursor: pointer;
 	}
 }

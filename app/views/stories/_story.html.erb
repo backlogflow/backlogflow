@@ -25,7 +25,7 @@
 	
 	  <div class="attributes">
 	    <% if story.description != "" %><p class="user-story"><%= story.description %></p> <%end%>
-	    <% if story.details     != "" %><p class="details"><%= raw( nl2br(story.details) ) %></p> <% else %> <p > Click to edit </p> <%end%>
+	    <% if story.details     != "" %><p class="details"><%= raw( nl2br(story.details) ) %></p> <% else %> <p class="linkForStory"> Edit a user story ... </p> <%end%>
 	    <% if story.value       != "" %><p><strong>Value:</strong> <span class="value"><%= story.value %></span>  </p><%end%>
 	  </div>
 	  
@@ -34,7 +34,7 @@
 	  <% end %>
 	  
 	  <div class="new-story" title="new" onclick="_gaq.push(['_trackEvent', 'new-substory-button', 'clicked'])"> 
-	  	<p>Click to add a user story</p>
+	  	<p class="linkForStory"> Add a user story ...</p>
 	  </div>
   </div>
 </li>
