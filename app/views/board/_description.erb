@@ -1,9 +1,12 @@
 <div class="description-header">
 	<span class="points"> <% if story.points >= 0 %> <%= story.points %>  <% else %> ? <% end %> </span> 
+	<div class="title"><%= story.title %></div>
 	<span class="status"><%= story.status %></span>  
 </div>
 <div class="description-body">
-	<% if story.description != "" %><p class="user-story"><%= story.description %></p> <%end%>
-	<% if story.details     != "" %><p class="details"><%= raw( nl2br(story.details) ) %></p><%end%>
-	<% if story.value       != "" %><p><strong>Value:</strong> <span class="value"><%= story.value %></span>  </p><%end%>	
+	<div class="attributes">
+		<% if story.description != "" %><p class="user-story"><%= story.description %></p> <%end%>
+		<% if story.details     != "" %><p class="details"><%= raw( nl2br(story.details) ) %></p><%end%>
+		<% if story.value       != "" %><p><strong>Value:</strong> <span class="value"><%= story.value %></span>  </p><%end%>
+	</div>	
 </div>

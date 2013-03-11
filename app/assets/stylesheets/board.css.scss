@@ -1,6 +1,11 @@
 // Place all the styles related to the board controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+     $height_header: 34px;
+$background_top_low: #2e2e2e;
+ $background_middle: #686868;
+ 
 .column
 {
   margin-top: 100px;
@@ -62,9 +67,53 @@
   -webkit-border-radius: 7px;
           border-radius: 7px;
   .description-header{
-    
+      background-image: linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -o-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -moz-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -webkit-linear-gradient(bottom, $background_top_low 0%,$background_middle 50%, $background_top_low 100%);
+    background-image: -ms-linear-gradient(bottom, $background_top_low 0%, $background_middle 50%, $background_top_low 100%);
+    background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0, $background_top_low),color-stop(0.5, $background_middle),color-stop(1, $background_top_low));
+               color: white;
+              height: $height_header;
+              
+    .points {
+           background: #000;
+         border-right: 1pxsolid #333333;
+        border-radius: 4px;
+                float: left;
+          font-weight: bold;
+          line-height: 30px;
+               height: $height_header;
+               margin: 0;
+              padding: 0 5px;
+    }
+    .title {
+             cursor: n-resize;
+        margin-left: 5px;
+              float: left;
+          font-size: 15px;
+        font-weight: bold;
+        line-height: 30px;
+         margin-top:  2px;
+         min-width: 200px;
+    }
+    .status{
+         background: #888;
+      border-radius: 5px;   
+              color: white;
+             cursor: default;
+              float: right;
+        font-weight: bold;
+        line-height: 20px;
+         margin-top: 6px;
+       margin-right: 4px;
+            padding: 1px 5px;
+    }                  
+                  
   }
   .description-body{
-    
+    .attributes{
+      margin: 0 0 0 20px;
+    }
   }
 }
