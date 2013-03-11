@@ -2,7 +2,7 @@
 	<div class="name_column"> <%= column %> </div> 
 	<% stories.each do |story| %>
 		<div class="postit">
-			<span class="title"><%= story.title %></span>
+			<span class="titleStory"> <%= story.title %> </span>
 			<input type="hidden" class="id_story" value="<%= story.id %>" >
 		</div>
 	<%end%> 	    
