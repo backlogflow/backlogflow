@@ -1,5 +1,9 @@
-<div class="desciption_content">
-	<span class="point_description"> <%= story.points == -1 ? '?' : story.points %> </span>
-	<span class="text_desciption"> <%=  story.description %> </span>
+<div class="description-header">
+	<span class="points"> <% if story.points >= 0 %> <%= story.points %>  <% else %> ? <% end %> </span> 
+	<span class="status"><%= story.status %></span>  
 </div>
-
+<div class="description-body">
+	<% if story.description != "" %><p class="user-story"><%= story.description %></p> <%end%>
+	<% if story.details     != "" %><p class="details"><%= raw( nl2br(story.details) ) %></p><%end%>
+	<% if story.value       != "" %><p><strong>Value:</strong> <span class="value"><%= story.value %></span>  </p><%end%>	
+</div>
